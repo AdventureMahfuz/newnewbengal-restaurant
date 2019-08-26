@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/jquery.timepicker.min.css">
     <!--<link rel="stylesheet" href="assets/css/slicknav.min.css">-->
     <!--<link rel="stylesheet" href="assets/css/animate.min.css">-->
-    <!--<link rel="stylesheet" href="assets/css/magnific-popup.css">-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!--<link rel="stylesheet" href="assets/css/responsive.css">-->
 
@@ -327,20 +327,138 @@
 <!--reservation section end-->
 
 
-<!--section start-->
-<!--section end-->
+<!--gallery section start-->
+<section class="gallery-section section-padding" id="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title text-center">
+                    <h1>web <span>gallery</span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="gallery-filter-menu">
+                    <ul>
+                        <li class="filter active" data-filter="all">All</li>
+                        <li data-filter=".breakfast" class="filter">Breakfast</li>
+                        <li data-filter=".lunch" class="filter">Lunch</li>
+                        <li data-filter=".dinner" class="filter">Dinner</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="gallery-images" id="gallery_filter">
+                    <div class="single-image mix breakfast">
+                        <img src="assets/images/gallery-1.jpg" alt="">
+                        <a href="assets/images/gallery-1.jpg">
+                            <i class="fa fa-search-plus"></i>
+                        </a>
+                        <h3>breakfast</h3>
+                    </div>
+                    <div class="single-image mix lunch dinner">
+                        <img src="assets/images/gallery-2.jpg" alt="">
+                        <a href="assets/images/gallery-2.jpg">
+                            <i class="fa fa-search-plus"></i>
+                        </a>
+                        <h3>lunch, dinner</h3>
+                    </div>
+                    <div class="single-image mix dinner">
+                        <img src="assets/images/gallery-3.jpg" alt="">
+                        <a href="assets/images/gallery-3.jpg">
+                            <i class="fa fa-search-plus"></i>
+                        </a>
+                        <h3>dinner</h3>
+                    </div>
+                    <div class="single-image mix breakfast">
+                        <img src="assets/images/gallery-4.jpg" alt="">
+                        <a href="assets/images/gallery-4.jpg">
+                            <i class="fa fa-search-plus"></i>
+                        </a>
+                        <h3>breakfast</h3>
+                    </div>
+                    <div class="single-image mix lunch">
+                        <img src="assets/images/gallery-5.jpg" alt="">
+                        <a href="assets/images/gallery-5.jpg">
+                            <i class="fa fa-search-plus"></i>
+                        </a>
+                        <h3>lunch</h3>
+                    </div>
+                    <div class="single-image mix dinner">
+                        <img src="assets/images/gallery-6.jpg" alt="">
+                        <a href="assets/images/gallery-6.jpg">
+                            <i class="fa fa-search-plus"></i>
+                        </a>
+                        <h3>dinner</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--gallery section end-->
 
 
-<!--section start-->
-<!--section end-->
+<!--contact us section start-->
+<section class="contact-us-section section-padding" id="contact">
+    <div class="contact-bg" style="background-image: url('assets/images/contact-bg.png');">
+       <!-- <div class="overlay"></div>-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title text-center">
+                        <h1><span>contact us</span></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="contact-form">
+                        <form action="#">
+                            <div class="form-group">
+                                <input type="text" id="full_name" name="full_name" class="form-control" required="required" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="c_email" name="c_email" class="form-control" required="required" placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="comment" id="comment" class="form-control" cols="30" rows="3" required="required" placeholder="Comments..."></textarea>
+                            </div>
+                            <button type="submit" class="reserve-btn contact-btn">submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--contact us section end-->
 
 
-<!--section start-->
-<!--section end-->
+<!--google map section start-->
+<section class="google-map-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1144.0166191549386!2d-1.6198635!3d55.0075824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e7132f0f6968f%3A0xce20542ee3f4191e!2sNew+Bengal+Indian+Restaurant!5e0!3m2!1sen!2suk!4v1482079804410" width="100%" height="700" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+</section>
+<!--google map section end-->
 
 
-<!--section start-->
-<!--section end-->
+<!--footer section start-->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="footer-widget">
+                    <p>Copyright 2019 New New Bengal. All Rights Reserved. </p>
+                    <p>developed by <a href="#"><img src="assets/images/developer-logo.png" alt=""></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer section end-->
 
 
 <!--back to top-->
@@ -359,9 +477,10 @@
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/jquery-ui.min.js"></script>
 <script src="assets/js/jquery.timepicker.min.js"></script>
+<script src="assets/js/mixitup.min.js"></script>
 <!--<script src="assets/js/jquery.slicknav.min.js"></script>-->
 <!--<script src="assets/js/wow.min.js"></script>-->
-<!--<script src="assets/js/jquery.magnific-popup.min.js"></script>-->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
 <script src="assets/js/custom.js"></script>
 <script>
     $(document).ready(function () {
@@ -372,6 +491,17 @@
 
         //time picker
         $('#r_time').timepicker();
+    });
+    /*gallery area*/
+    $('#gallery_filter').mixItUp();
+
+    /*magnific popup*/
+    $('.single-image').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true
+        },
     });
 </script>
 </body>
