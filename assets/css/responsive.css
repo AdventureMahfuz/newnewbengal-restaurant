@@ -126,7 +126,9 @@
         border-top: 1px solid #fff;
     }
     /*mobile view menubar end*/
-
+    .logo img{
+        width: 100%;
+    }
     .hero-bg {
         padding-top: 30px;
     }
@@ -198,10 +200,14 @@
         padding: 0;
     }
 
-    .info-common-style.facebook-page {top: 0;}
+    .info-common-style.facebook-page {
+        top: 0;
+        overflow: hidden;
+    }
 
     .single-image {
         width: 100%;
+        margin: initial;
         transform: initial;
     }
     footer.footer-section {
