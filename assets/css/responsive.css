@@ -1,11 +1,247 @@
 /*Medium Layout: 1280*/
-@media only screen and (min-width: 992px) and (max-width: 1200px){}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .info:before {
+        left: 0;
+    }
+
+    .info:after {
+        right: 0;
+    }
+
+    ul#nav li a {
+        font-size: 16px;
+        padding: 16px 10px;
+    }
+
+    .info-common-style.facebook-page {
+        overflow: hidden;
+    }
+
+    .offers-title h1 {
+        padding: 0;
+    }
+
+    .single-image {
+        width: 300px;
+    }
+}
 
 /*Tablet Layout: 768px*/
-@media only screen and (min-width: 768px) and (max-width: 991px) {}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .info p {
+        font-size: 18px;
+    }
+
+    .info:before {
+        left: 0;
+        width: 110px;
+    }
+
+    .info:after {
+        right: 0;
+        width: 110px;
+    }
+
+    .theme-btn a {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
+    .hero-links {
+        margin-top: 20px;
+    }
+
+    ul#nav li a {
+        font-size: 14px;
+        padding: 5px 7px;
+    }
+
+    .section-title h1 {
+        font-size: 30px;
+    }
+
+    .client-say p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .client-info p span {
+        font-size: 30px;
+    }
+
+    .client-info p {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .info-common-style.facebook-page {
+        overflow: hidden;
+    }
+
+    .facebook-page-iframe {
+        padding: 0;
+    }
+
+    .info-header h3 {
+        font-size: 20px;
+        padding: 15px 0;
+    }
+
+    .offers-title h1 {
+        font-size: 25px;
+        padding: 0;
+        line-height: 35px;
+    }
+
+    .offer-excerpt {
+        padding: 0 10px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .info-link a {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    .single-image {
+        width: 48%;
+        transform: initial;
+    }
+
+    /*login-registration page start*/
+    .form-control {
+        margin-bottom: 15px;
+    }
+    /*login-registration page end*/
+}
 
 /*Mobile Layout: 320px*/
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+    /*mobile view menubar start*/
+    .sticky-area-mobile-view {
+        display: block;
+        border-top: 1px solid #fff;
+    }
+    /*mobile view menubar end*/
+
+    .hero-bg {
+        padding-top: 30px;
+    }
+
+    .info p {
+        font-size: 14px;
+    }
+
+    .info:before {
+        left: 0;
+        top: 15px;
+        width: 100%;
+    }
+
+    .info:after {
+        right: 0;
+        top: initial;
+        bottom: 10px;
+        width: 100%;
+    }
+
+    .info {
+        margin-top: 15vh;
+    }
+
+    .hero-links .theme-btn {
+        margin-bottom: 20px;
+    }
+
+    header.home-navigation {
+        display: none;
+    }
+    .navigation-menu {
+         display: none;
+    }
+    .about-thumb {
+        margin-bottom: 15px;
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .client-say p {
+        font-size: 25px;
+        line-height: 37px;
+    }
+
+    .client-info p {
+        font-size: 25px;
+    }
+
+    .client-info p span {
+        font-size: 25px;
+    }
+
+    .info-common-style {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 450px;
+    }
+
+    .offer-excerpt {
+        padding: 0;
+    }
+
+    .offers-title h1 {
+        padding: 0;
+    }
+
+    .info-common-style.facebook-page {top: 0;}
+
+    .single-image {
+        width: 100%;
+        transform: initial;
+    }
+    footer.footer-section {
+        margin-bottom: 65px;
+    }
+    /*login-registration page start*/
+    .col-sm-2.text-right {
+        padding: 0;
+    }
+
+    .col-xs-3.text-right {
+        padding: 0;
+    }
+
+    .form-control {
+        margin-bottom: 15px;
+    }
+    /*login-registration page end*/
+}
 
 /*Wide Mobile Layout: 480px*/
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .about-thumb img {
+        width: initial;
+    }
+
+    .about-thumb {
+        text-align: center;
+    }
+
+    .facebook-page-iframe {
+        text-align: center;
+    }
+
+    .single-image {
+        width: 48%;
+        text-align: center;
+    }
+
+    .contact-bg {
+        padding: 30px 0;
+    }
+}

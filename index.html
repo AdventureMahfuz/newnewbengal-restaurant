@@ -14,17 +14,57 @@
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
     <link rel="stylesheet" href="assets/css/jquery.timepicker.min.css">
-    <!--<link rel="stylesheet" href="assets/css/slicknav.min.css">-->
-    <!--<link rel="stylesheet" href="assets/css/animate.min.css">-->
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!--<link rel="stylesheet" href="assets/css/responsive.css">-->
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target=".navigation-menu" data-offset="50">
+<!--mobile view start-->
+<div class="mobile_view">
+    <div class="mobile-menu-area">
+        <ul class="mobile-menu">
+            <li><i class="fa fa-times" id="close"></i></li>
+            <li><a class="nav-link" href="#top">Home</a></li>
+            <li><a class="nav-link" href="online-order.html">Order Online</a></li>
+            <li><a class="nav-link" href="#reservation">about us</a></li>
+            <li><a class="nav-link" href="#reservation">reservation</a></li>
+            <li><a class="nav-link" href="#gallery">Gallery</a></li>
+            <li><a class="nav-link" href="#contact">Contact Us</a></li>
+            <li><a class="nav-link" href="login.html">login</a></li>
+        </ul>
+    </div>
+    <div class="sticky-area-mobile-view">
+        <a href="index.html">
+            <div class="mobile-home-btn text-center mobile-sticky-bar-common-style">
+                <i class="fa fa-home"></i>
+                <p>home</p>
+            </div>
+        </a>
+        <div class="mobile-user-btn text-center mobile-sticky-bar-common-style">
+            <i class="fa fa-user"></i>
+            <p>user</p>
+        </div>
+        <div class="mobile-call-btn text-center mobile-sticky-bar-common-style">
+            <i class="fa fa-phone"></i>
+            <p>call</p>
+        </div>
+        <div class="mobile-cart-btn text-center mobile-sticky-bar-common-style">
+            <i class="fa fa-shopping-cart"></i>
+            <p>order</p>
+        </div>
+        <div class="mobile-menu-btn text-center mobile-sticky-bar-common-style">
+            <i class="fa fa-bars"></i>
+            <p>more</p>
+        </div>
+    </div>
+</div>
+<!--mobile view end-->
+
+
 <!--hero section start-->
 <section id="top" class="hero-section">
     <div class="hero-bg" style="background-image: url('assets/images/hero-bg.jpg');">
@@ -57,7 +97,7 @@
 
 
 <!--Navigation menu section start-->
-<header class="navigation-menu-section">
+<header class="navigation-menu-section home-navigation">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
@@ -69,14 +109,14 @@
             </div>
             <div class="col-sm-9">
                 <div class="navigation-menu">
-                    <ul id="nav">
-                        <li class="active"><a href="#top">Home</a></li>
-                        <li><a href="#">Online Order</a></li>
+                    <ul class="nav" id="nav">
+                        <li><a href="#top">Home</a></li>
+                        <li><a href="online-order.html">Online Order</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#reservation">Reservation</a></li>
                         <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#" class="login"> Login </a></li>
                         <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="login.html"> Login </a></li>
                     </ul>
                 </div>
             </div>
@@ -204,9 +244,9 @@
                         </div>
                         <div class="facebook-page-iframe">
                             <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/newnewbengal&amp;tabs=timeline&amp;width=350&amp;height=340&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=false&amp;appId"
-                                    style="border:none;overflow:hidden" scrolling="no" allowtransparency="true"
+                                    style="border:none;overflow:hidden"
                                     width="350"
-                                    height="340" frameborder="0">
+                                    height="340">
                             </iframe>
                         </div>
                         <div class="info-link facebook text-center">
@@ -254,7 +294,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
+                    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                         <div class="reservation-form">
                             <form action="#">
                                 <div class="row">
@@ -405,7 +445,7 @@
 <!--contact us section start-->
 <section class="contact-us-section section-padding" id="contact">
     <div class="contact-bg" style="background-image: url('assets/images/contact-bg.png');">
-       <!-- <div class="overlay"></div>-->
+        <!-- <div class="overlay"></div>-->
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -415,17 +455,20 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
+                <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
                     <div class="contact-form">
                         <form action="#">
                             <div class="form-group">
-                                <input type="text" id="full_name" name="full_name" class="form-control" required="required" placeholder="Your Name">
+                                <input type="text" id="full_name" name="full_name" class="form-control"
+                                       required="required" placeholder="Your Name">
                             </div>
                             <div class="form-group">
-                                <input type="email" id="c_email" name="c_email" class="form-control" required="required" placeholder="your@email.com">
+                                <input type="email" id="c_email" name="c_email" class="form-control" required="required"
+                                       placeholder="your@email.com">
                             </div>
                             <div class="form-group">
-                                <textarea name="comment" id="comment" class="form-control" cols="30" rows="3" required="required" placeholder="Comments..."></textarea>
+                                <textarea name="comment" id="comment" class="form-control" cols="30" rows="3"
+                                          required="required" placeholder="Comments..."></textarea>
                             </div>
                             <button type="submit" class="reserve-btn contact-btn">submit</button>
                         </form>
@@ -440,7 +483,8 @@
 
 <!--google map section start-->
 <section class="google-map-section">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1144.0166191549386!2d-1.6198635!3d55.0075824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e7132f0f6968f%3A0xce20542ee3f4191e!2sNew+Bengal+Indian+Restaurant!5e0!3m2!1sen!2suk!4v1482079804410" width="100%" height="700" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1144.0166191549386!2d-1.6198635!3d55.0075824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e7132f0f6968f%3A0xce20542ee3f4191e!2sNew+Bengal+Indian+Restaurant!5e0!3m2!1sen!2suk!4v1482079804410"
+            style="border:0" allowfullscreen=""></iframe>
 </section>
 <!--google map section end-->
 
@@ -462,15 +506,9 @@
 
 
 <!--back to top-->
-<!--<div class="back_to_top_area">
-    <div class="container">
-        <div class="row">
-            <div class="back_to_top">
-                <i class="fa fa-arrow-up"></i>
-            </div>
-        </div>
-    </div>
-</div>-->
+<div class="back_to_top">
+    <i class="fa fa-angle-up"></i>
+</div>
 <!--back to end-->
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
@@ -478,31 +516,7 @@
 <script src="assets/js/jquery-ui.min.js"></script>
 <script src="assets/js/jquery.timepicker.min.js"></script>
 <script src="assets/js/mixitup.min.js"></script>
-<!--<script src="assets/js/jquery.slicknav.min.js"></script>-->
-<!--<script src="assets/js/wow.min.js"></script>-->
 <script src="assets/js/jquery.magnific-popup.min.js"></script>
 <script src="assets/js/custom.js"></script>
-<script>
-    $(document).ready(function () {
-        //datepicker
-        $(function () {
-            $("#datepicker").datepicker();
-        });
-
-        //time picker
-        $('#r_time').timepicker();
-    });
-    /*gallery area*/
-    $('#gallery_filter').mixItUp();
-
-    /*magnific popup*/
-    $('.single-image').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        gallery: {
-            enabled: true
-        },
-    });
-</script>
 </body>
 </html>

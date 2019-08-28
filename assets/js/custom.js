@@ -1,105 +1,115 @@
-(function($) {
-$(document).ready(function(){
-    //testimonials slider
-    $('.testimonials').owlCarousel({
-        loop:true,
-        margin:0,
-        autoplay: true,
-        autoplayHoverPause:true,
-        responsiveClass:true,
-        nav:true,
-        dots:false,
-        mouseDrag:true,
-        touchDrag: true,
-        responsive:{
-            0:{
-                items:1,
-                nav:true
-            },
-            600:{
-                items:1,
-                nav:true
-            },
-            1000:{
-                items:1,
-                nav:true,
-                loop:true
+(function ($) {
+    $(document).ready(function () {
+        //sticky menu when scroll
+        $(window).on('scroll', function () {
+            var scroll = $(window).scrollTop();
+            var heroHeight = document.getElementById('top').offsetHeight;
+            if (scroll > heroHeight) {
+                $("header.navigation-menu-section").addClass("sticky_top_section");
+            } else {
+                $("header.navigation-menu-section").removeClass("sticky_top_section");
             }
-        }
-    });
-    /*$('.testimonials').owlCarousel({
-        animateIn: 'fadeIn',
-        animateOut: 'fadeOut',
-        loop:true,
-        margin:10,
-        autoplay: true,
-        responsiveClass:true,
-        nav:false,
-        dots:true,
-        mouseDrag:false,
-        touchDrag: false,
-        responsive:{
-            0:{
-                items:1,
-                dots:true
-            },
-            600:{
-                items:1,
-                dots:true
-            },
-            1000:{
-                items:1,
-                dots:true,
-                loop:true
+        });
+
+        //smooth scrolling
+        $("ul#nav li a, ul.mobile-menu li a").click(function () {
+            var hash = this.hash;
+            var position = $(hash).offset().top;
+            $("html").animate({
+                scrollTop: position - 50
+            }, 800);
+        });
+
+        //mobile menu custom js
+        $(".mobile-menu-btn").on("click", function () {
+            $('ul.mobile-menu').css({
+                'right': '0',
+                'opacity': '1',
+                'transition': 'all .5s',
+            });
+        });
+        $("#close").on("click", function () {
+            $('ul.mobile-menu').css({
+                'right': '-100%',
+                'opacity': '0',
+                'transition': 'all .8s',
+            });
+        });
+        $("ul.mobile-menu li a").on("click", function () {
+            $('ul.mobile-menu').css({
+                'right': '-100%',
+                'opacity': '0',
+                'transition': 'all .8s',
+            });
+        });
+        //testimonials slider
+        $('.testimonials').owlCarousel({
+            loop: true,
+            margin: 0,
+            autoplay: true,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+            nav: true,
+            dots: false,
+            mouseDrag: true,
+            touchDrag: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 1,
+                    nav: true
+                },
+                1000: {
+                    items: 1,
+                    nav: true,
+                    loop: true
+                }
             }
-        }
-    });*/
-    //slider animation
-    /*$('#slider').on('translate.owl.carousel',function () {
-        $('.item-content h1, .item-content p, .hero-cont-btn a, .hero-more-link a').removeClass('animated fadeInUp').css('opacity','0');
-        //$('.hero-cont-btn a').removeClass('animated slideInLeft').css('opacity','0');
-        //$('.hero-more-link a').removeClass('animated slideInRight').css('opacity','0');
+        });
+
+
+        //back to top show when scroll
+        $(".back_to_top i.fa").css("display", "none");
+        $(window).on('scroll', function () {
+            var scroll = $(window).scrollTop();
+            if (scroll < 300) {
+                $(".back_to_top i.fa").css("display", "none");
+            } else {
+                $(".back_to_top i.fa").css("display", "block");
+            }
+        });
+        $(".back_to_top i.fa").on("click", function () {
+            $("html").animate({
+                scrollTop: 0
+            }, 800);
+        });
+
+        //datepicker
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+
+        //time picker
+        $('#r_time').timepicker();
+
     });
-    $('#slider').on('translated.owl.carousel',function () {
-        $('.item-content h1, .item-content p, .hero-cont-btn a, .hero-more-link a').addClass('animated fadeInUp').css('opacity','0');
-        //$('.hero-cont-btn a').addClass('animated slideInLeft').css('opacity','1');
-        //$('.hero-more-link a').addClass('animated slideInRight').css('opacity','1');
-    });*/
 
 
+    /*gallery area*/
+    $('#gallery_filter').mixItUp();
 
-
-    //WoW js activation
-    //new WOW().init();
-
-    //responsive slick nav menu activation
-    /*$('#nav').slicknav({
-        prependTo:'.responsive-mobile-menu',
-    });*/
-
-    // magnific popup activation
-   /* $('.popup-img').magnificPopup({
+    /*magnific popup*/
+    $('.single-image').magnificPopup({
+        delegate: 'a',
+        type: 'image',
         gallery: {
             enabled: true
         },
-        type: 'image'
-    });*/
-
-    //back to top show when scroll
-    /*$(".back_to_top i.fa").css("display", "none");
-    $(window).on('scroll', function () {
-        var scroll = $(window).scrollTop();
-        if (scroll < 300) {
-            $(".back_to_top i.fa").css("display", "none");
-        } else {
-            $(".back_to_top i.fa").css("display", "block");
-        }
     });
-    $(".back_to_top i.fa").on("click",function () {
-        $("html").animate({
-            scrollTop: 0
-        }, 800);
-    });*/
 
-});
-})( jQuery );
+
+})(jQuery);
+
